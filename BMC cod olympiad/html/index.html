@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akatsuki</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .div1 {
+        padding: 20px;
+      }
+      .inside1 {
+        height: 150px;
+        width: 200px;
+
+        border: 2px solid black;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .div2 {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .inside2 {
+        width: 250px;
+        height: 60px;
+        background-color: brown;
+      }
+      .inside2:hover {
+        background-color: pink;
+      }
+      .div11 {
+        cursor: pointer;
+      }
+      .div11:hover {
+        background-color: pink;
+      }
+      .div3 {
+        margin-top: 20px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .boxes {
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+        background-color: aqua;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .boxes:hover {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contaner">
+      <div class="div1">
+        <div class="inside1">
+          <div class="div11">BoxModelChallenge</div>
+        </div>
+      </div>
+      <div class="div2">
+        <div class="inside2"></div>
+      </div>
+      <div class="div3">
+        <div class="inside3">
+          <div class="boxes"><div>1</div></div>
+          <div class="boxes"><div>4</div></div>
+          <div class="boxes"><div>7</div></div>
+        </div>
+
+        <div class="inside3">
+          <div class="boxes"><div>2</div></div>
+          <div class="boxes"><div>5</div></div>
+          <div class="boxes"><div>8</div></div>
+        </div>
+        <div class="inside3">
+          <div class="boxes"><div>3</div></div>
+          <div class="boxes"><div>6</div></div>
+          <div class="boxes"><div>9</div></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

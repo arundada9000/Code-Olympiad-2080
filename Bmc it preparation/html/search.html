@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Book Search</title>
+</head>
+
+<body>
+  <input type="text" id="searchInput" placeholder="Search by title..." />
+  <ul id="results"></ul>
+
+  <script>
+    const books = [
+      { title: "JavaScript: The Good Parts", author: "Douglas Crockford" },
+      { title: "Pooja puja Poooja pooooooja", author: "Arun Neupane" },
+      { title: "Eloquent JavaScript", author: "Marijn Haverbeke" },
+      { title: "You Don't Know JS", author: "Kyle Simpson" },
+      { title: "JavaScript: The Definitive Guide", author: "David Flanagan" },
+    ];
+
+    const searchInput = document.getElementById("searchInput");
+    const resultsList = document.getElementById("results");
+
+    function searchBooks(query) {
+      return books.filter((book) =>
+        book.title.toLowerCase().includes(query.toLowerCase())
+      );
+    }
+
+    function displayResults(results) {
+      resultsList.innerHTML = "";
+      results.forEach((book) => {
+        const li = document.createElement("li");
+        li.textContent = `${book.title} by ${book.author}`;
+        resultsList.appendChild(li);
+      });
+    }
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.trim();
+      const results = query.length > 0 ? searchBooks(query) : [];
+      displayResults(results);
+    });
+  </script>
+</body>
+
+</html>

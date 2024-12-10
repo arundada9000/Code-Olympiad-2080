@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated using hover</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        text-align: center;
+        cursor: pointer;
+        font-size: 50px;
+        padding: 20px;
+        background: linear-gradient(to left, black 50%, lightblue 50%) right;
+        background-size: 200%;
+        transition: 2s ease-out;
+      }
+      .container:hover {
+        background-position: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">I love you </div>
+  </body>
+</html>
